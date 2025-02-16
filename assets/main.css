@@ -1,0 +1,28 @@
+/* Bootstrap */
+
+@import 'bootstrap.min.css';
+
+/* Variant */
+
+@media (max-width: 576px) {
+	.variant__image {
+		max-height: 300px;
+	}
+}
+
+/* Area */
+
+.area_vanish-paper {
+	bottom: 0 !important;
+	transition-property: bottom;
+	transition-duration: 5s;
+	transition-timing-function: linear;
+}
+
+.area_vanish-words {
+	background-color: var(--bs-secondary);
+	color: var(--bs-secondary);
+	transition-property: background-color, color;
+	transition-duration: .1s;
+	transition-timing-function: ease;
+}

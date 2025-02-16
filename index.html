@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no">
+		<link rel="icon" href="assets/favicon.png">
+		<link rel="stylesheet" href="assets/main.css">
+		<title>Тренировка чтения</title>
+	</head>
+	<body>
+		<div class="container my-5">
+			<div class="row variants d-none">
+				<div class="col">
+					<h2 class="display-6">Выбери текст</h2>
+					<div class="row row-cols-1 row-cols-lg-2 g-3 mt-5 variants__list"></div>
+				</div>
+			</div>
+			<div class="row reading d-none">
+				<div class="col col-md-10 col-lg-8">
+					<h2 class="display-6 mb-0">Прочитай текст</h2>
+					<div class="position-relative my-5 fs-4 user-select-none reading__text"></div>
+					<button type="button" class="btn btn-lg btn-primary w-100 reading__check">Текст прочитан</button>
+				</div>
+			</div>
+			<div class="row questions d-none">
+				<div class="col col-md-10 col-lg-8">
+					<h2 class="display-6 mb-0">Проверь себя</h2>
+					<form class="questions__form">
+						<div class="my-5 fs-4 questions__list"></div>
+						<button type="submit" class="btn btn-lg btn-primary w-100 questions__check">Проверить</button>
+					</form>
+					<button type="button" class="btn btn-lg btn-secondary w-100 questions__back">Вернуться</button>
+				</div>
+			</div>
+		</div>
+		<template id="template-variant">
+			<div class="col variant">
+				<div class="card h-100 overflow-hidden">
+					<div class="card-body p-0">
+						<div class="row g-0 h-100">
+							<div class="col-sm-4">
+								<img class="w-100 h-100 object-fit-cover variant__image">
+							</div>
+							<div class="col-sm-8">
+								<div class="p-3">
+									<h3 class="h5 card-title variant__title"></h3>
+									<p class="card-text variant__description"></p>
+									<small class="text-body-secondary variant__author"></small>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card-footer d-flex justify-content-end p-2">
+						<button class="btn btn-primary px-4 stretched-link variant__open">Читать текст</button>
+					</div>
+				</div>
+			</div>
+		</template>
+		<template id="template-text">
+			<div class="mb-5 question">
+				<label class="form-label w-100 question__label"></label>
+				<input type="text" autocomplete="off" class="form-control fs-4 question__input">
+			</div>
+		</template>
+		<template id="template-checks">
+			<fieldset class="mb-5 question">
+				<legend class="question__legend"></legend>
+			</fieldset>
+		</template>
+		<template id="template-check">
+			<div class="form-check answer">
+				<input type="radio" class="form-check-input answer__input">
+				<label class="form-check-label w-100 answer__label"></label>
+			</div>
+		</template>
+		<script src="assets/main.js"></script>
+	</body>
+</html>
